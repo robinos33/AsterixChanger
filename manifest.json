@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Asterix Changer",
+  "description": "This extension replaces asterisks by asterix ;)",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "img/asterix_36.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["asterix.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ],
+  "icons": {
+    "128": "img/asterix_36.png"
+  }
+}
